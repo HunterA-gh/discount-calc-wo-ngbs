@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Discount Finder</title>
+    <link href="style.css" rel="stylesheet" type="text/css">
+</head>
+<body onload="document.discountfinder.reset()">
+<form name="discountfinder">
+    <div class="grid-container">
+        <div class="discount-title">
+            DISCOUNT FINDER
+        </div>
+        <div class="price">
+            <div class="dollarsign">
+                <label for="pricebox">$</label>
+            </div>
+            <div class="priceinput">
+                <input type="number" id="pricebox" min="0" step=".01" placeholder="Enter your price here" oninput="this.value = Math.abs(this.value)">
+            </div>
+        </div>
+        <div class="discount">
+            <div class="slider-area">
+                <div class="discount-slider">
+                    <input id="rangeinput"  type="range" min="0" max="100" value="0" oninput="updateValues(this.value)"/>
+                </div>
+                <div class="discount-label">
+                    <label for="rangeinput">Discount Amount</label>
+                </div>
+            </div>
+            <div class="discount-output">
+                <output id="rangevalue">0</output>
+            </div>
+            <div class="discount-percent">% off</div>
+        </div>
+        <div class="calculate-button">
+            <button type="button" class="button">Calculate Discount!</button>
+        </div>
+        <div class="discounted-output"></div>
+    </div>
+</form>
+<script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,150 @@
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+    gap: 30px 0px;
+    grid-template-areas:
+    "discount-title"
+    "price"
+    "discount"
+    "calculate-button"
+    "discounted-output";
+    background-color: rgb(168, 115, 35);
+    margin-left: 11rem;
+    margin-right: 11rem;
+    border-radius: 60px;
+    box-shadow: 10px 10px;
+    max-width: 500px;
+    max-height: 400px;
+
+}
+
+.discount-title{
+    display: grid;
+    place-self: center;
+    padding-right: 3.1rem;
+    font-family: MathJax_Typewrite, sans-serif;
+    font-size: xx-large;
+    font-weight: bold;
+    text-decoration: underline;
+    color: #000000;
+
+}
+
+.price {
+    display: grid;
+    grid-template-columns: 0.4fr 1.6fr;
+    grid-template-rows: 1fr;
+    padding-right: 6rem;
+    grid-template-areas:
+    "dollarsign priceinput";
+    grid-area: price;
+}
+
+.dollarsign {
+    grid-area: dollarsign;
+    padding-left: 2rem;
+    padding-top: 0.6rem;
+    font-size: xx-large;
+}
+
+.priceinput {
+    grid-area: priceinput;
+}
+
+#pricebox{
+    width: 20rem;
+    height: 3rem;
+    border-radius: 15px;
+    outline: black;
+}
+
+input[type="number"] {
+    font-size: x-large;
+}
+
+.discount {
+    display: grid;
+    grid-template-columns: 2.3fr 0.4fr 0.3fr;
+    grid-template-rows: 1fr;
+    gap: 0px 0px;
+    grid-template-areas:
+    "slider-area discount-output discount-percent";
+    grid-area: discount;
+}
+.slider-area {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1.4fr 0.6fr;
+    gap: 0px 0px;
+    grid-template-areas:
+    "discount-slider"
+    "discount-label";
+    grid-area: slider-area;
+}
+
+.discount-slider {
+    grid-area: discount-slider;
+    place-self: center;
+    padding-left: 2rem;
+}
+
+input[type="range"] {
+    width: 18rem;
+}
+
+.discount-label {
+    grid-area: discount-label;
+    justify-self: center;
+    font-size: medium;
+    
+}
+.discount-output {
+    grid-area: discount-output;
+    font-size: x-large;
+    white-space: nowrap;
+}
+
+.discount-percent {
+    grid-area: discount-percent;
+    font-size: x-large;
+    white-space: nowrap;
+    padding-right: 2.3rem;
+    
+}
+
+.calculate-button {
+    grid-area: calculate-button;
+    justify-self: center;
+}
+
+.button {
+    display: grid;
+    padding: 15px 40px;
+    font-size: 24px;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    outline: none;
+    color: black;
+    background-color: rgb(255, 255, 255);
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 9px #8b8888;
+}
+
+.button:hover {
+    background-color: #292199d0;
+}
+
+.button:active {
+    background-color: #3e8e41;
+    box-shadow: 0 5px #666;
+
+}
+
+.discounted-output {
+    grid-area: discounted-output;
+    justify-self: center;
+    font-size: x-large;
+}
